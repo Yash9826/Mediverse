@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      th:replace="base::Layout(~{::section})">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>User Dashboard</title>
+</head>
+<body>
+<section>
+    <div class="container p-5">
+        <p class="text-center fs-3 mt-5">User Dashboard</p>
+        <div class="row p-5">
+
+            <!-- Add Product Card -->
+            <div class="col-md-4 mt-2">
+                <a href="/user/addProduct" class="text-decoration-none">
+                    <div class="card card-sh">
+                        <div class="card-body text-center text-primary">
+                            <i class="fa-solid fa-square-plus fa-3x"></i>
+                            <h4>Add Product</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- View Product Card -->
+            <div class="col-md-4 mt-2">
+                <a href="/user/products" class="text-decoration-none">
+                    <div class="card card-sh">
+                        <div class="card-body text-center text-success">
+                            <i class="fa-solid fa-table-list fa-3x"></i>
+                            <h4>View Product</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Modify Product Card -->
+            <div class="col-md-4 mt-2">
+                <a href="/user/editProduct" class="text-decoration-none">
+                    <div class="card card-sh">
+                        <div class="card-body text-center text-warning">
+                            <i class="fa-solid fa-pen-to-square fa-3x"></i>
+                            <h4>Modify Product</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            </div>
+            </div>
+            </section>

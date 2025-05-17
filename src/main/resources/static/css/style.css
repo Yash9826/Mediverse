@@ -1,0 +1,34 @@
+.bg-primary {
+	background: #009688 !important;
+}
+
+.carouselExample {
+	height: 50vh;
+}
+
+.card-sh {
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.cat-div {
+	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.error {
+	color: red;
+}
+
+/* Ensure all images fit well */
+.carousel-item img {
+	height: 350px; /* Set images to half of the viewport height */
+	object-fit: cover;
+	/* Ensures images cover the entire area without stretching */
+}
+
+/* .oval-image {
+  width: 150px; Set width
+  height: 200px; Set height (different from width for an oval)
+  border-radius: 80%; Makes it an oval
+  object-fit: cover; Ensures image covers the shape
+  display: block;
+} */

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+	th:replace="base::Layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<!-- Image slider starts-->
+		<div id="carouselExample" class="carousel slide"
+			data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/ecom1.png" class="d-block w-100" alt="Image 1">
+				</div>
+				<div class="carousel-item">
+					<img src="img/ecom4.jpg" class="d-block w-100" alt="Image 2">
+				</div>
+				<div class="carousel-item">
+					<img src="img/ecom3.jpg" class="d-block w-100" alt="Image 3">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button"
+				data-bs-target="#carouselExample" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button"
+				data-bs-target="#carouselExample" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+		<!-- Image slider ends-->
+		</br>
+
+
+
+
+
+
+		<!-- Start Category Module -->
+		<div class="container">
+			<div class="row">
+				<p class="text-center fs-4">Category</p>
+
+				<!-- Dynamic Categories Loop -->
+				<div class="col-md-2" th:each="cat : ${categories}">
+					<div
+						class="card rounded-circle shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							
+							
+							<img th:src="@{'/img/category_img/' + ${cat.imageName}}" width="90%"
+								height="150px" alt="Category Image"> </br>
+							<p th:text="${cat.name}">Category Name</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- End Category Module -->
+		
+		
+		
+		
+		<!-- Start Latest Product Module -->
+		<div class="container-fluid bg-light p-3">
+			<div class="row">
+				<p class="text-center fs-4">Latest Product</p>
+
+				<!-- Dynamic Products Loop -->
+				<div class="col-md-3" th:each="prod : ${products}">
+					<div class="card shadow-sm p-3 mb-5 bg-body-tertiary rounded">
+						<div class="card-body text-center">
+							<!-- Dynamic Product Image -->
+							<img th:src="@{'/img/products_img/' + ${prod.image}}" alt="Product Image"
+								width="65%" height="140px">
+							<p class="text-center" th:text="${prod.title}">Product Title</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- End Latest Product Module -->
+
+
+
+
+
+
+	</section>
+</body>
+</html>
